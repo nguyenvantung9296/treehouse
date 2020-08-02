@@ -79,6 +79,17 @@ body{
         font-size:16px;
     }
 }
+%CSSButton-hover{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0px;
+    width:0%;
+    height:100%;
+    background: #7cc576;
+    z-index:-1;
+    transition: .5s ease-out;
+}
 .header{
     max-width:1400px;
     margin:auto;
@@ -119,7 +130,23 @@ body{
                     text-decoration: none;
                     color:#111111;
                     font-size:14px;
+                    position: relative;
 
+                }
+                a:before{
+                    content:'';
+                    position: absolute;
+                    top: 3px;
+                    left:-10px;
+                    height:0px;
+                    width:4px;
+                    background: #7cc576;
+                    transition: .5s ease-in-out;
+                    opacity: 0;
+                }
+                a:hover:before{
+                    opacity: 1;
+                    height:15px;
                 }
             }
         }
@@ -213,6 +240,23 @@ body{
                 border:none;
                 border-radius: 30px;
                 color:#fff;
+                transition: .5s ease-in-out;
+                position: relative;
+                z-index:2;
+                overflow: hidden;
+            }
+            button:hover{
+                background-color: #fff;
+                color:#3e3e3e;
+            }
+            button:before{
+                @extend %CSSButton-hover;
+                border-radius: 30px;
+            }
+            button:hover:before{
+                width:60%;
+                border:1px solid #fff;
+                border-radius: 30px;
             }
         }
         .hero__background{
@@ -378,6 +422,9 @@ body{
                     li{
                         span{
                             margin-right:24px;
+                            img{
+                                margin-bottom: 5px;
+                            }
                         }
                         @extend %CSScolor-p;
                         color:#e9e9e9c4;
@@ -394,6 +441,22 @@ body{
                     border-radius: 30px;
                     border:none;
                     margin-top: 50px;
+                    position: relative;
+                    z-index:2;
+                    overflow: hidden;
+                }
+                button:hover{
+                    background-color: #fff;
+                    color:#3e3e3e;
+                }
+                button:before{
+                    @extend %CSSButton-hover;
+                    border-radius: 30px;
+                }
+                button:hover:before{
+                    width:60%;
+                    border:1px solid #fff;
+                    border-radius: 30px;
                 }
 
             }
@@ -481,9 +544,21 @@ body{
                     color:#7cc576;
                     font-weight: 600;
                     cursor: pointer;
+                    z-index:2;
+                    position: relative;
                     img{
                         margin-left:30px;
                     }
+                }
+                span:before{
+                    @extend %CSSButton-hover;    
+                }
+                span:hover:before{
+                   width:60%;
+                   padding: 10px 10px;
+                }
+                span:hover{
+                    color:#111111;
                 }
             }
         }
@@ -576,6 +651,20 @@ body{
                 border-radius: 8px;
                 margin-bottom: 70px;
                 font-size:18px;
+                position: relative;
+                z-index: 2;
+                transition: .5s ease-in-out;
+            }
+            button:before{
+                @extend %CSSButton-hover;
+                background: #fff;
+            }
+            button:hover:before{
+                width:60%;
+            }
+            button:hover{
+                color:#3e3e3e;
+                border: 5px solid #3e3e3e;
             }
         }
         .section6__logo{
@@ -632,6 +721,10 @@ body{
                             text-decoration: none;
                         color:#b9b9b9;
                         font-size:16px; 
+                        transition: .5s ease-in-out;
+                        }
+                        a:hover{
+                            color:#fff;
                         }
                        }
                        .li--active{
