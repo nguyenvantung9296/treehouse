@@ -39,7 +39,7 @@ body{
         margin-top:20px;
     }
 }
-%CSSsection1{
+%CSSservices{
     max-width:940px;
         margin:auto;
 }
@@ -94,6 +94,7 @@ body{
     max-width:1400px;
     margin:auto;
     background: #fff;
+    position: relative;
     &__intro{
         max-width:940px;
         margin:auto;
@@ -152,11 +153,13 @@ body{
         }
 
     }
+
 //
 //MENUUUUUUUUUUUUUUUUUUUUUUUUU
 @media(max-width:676px){
     .header{
         position: relative;
+        overflow: hidden;
         &__intro{
            display: flex;
            flex-direction: column;
@@ -172,6 +175,8 @@ body{
            background: #fff;
            transform: translateX(20rem);
            transition: .5s ease-in-out;
+           position: fixed;
+           
            .header__navigation{
             ul{
                 li{
@@ -181,7 +186,7 @@ body{
            }
            .header__navigation{
                text-align: center;
-               margin-top:50px;
+               margin-top: 160px;
                ul{
                    margin-top:40px;
                    li{
@@ -194,7 +199,7 @@ body{
                position: absolute;
                left:50%;
                transform: translate(-50%,0);
-               margin: 30px 0;
+               margin: 77px 0;
            }
        }
     }   
@@ -213,6 +218,8 @@ body{
         background-image:url(../image/Treehouse-Home.jpg);
         height:530px;
         position: relative;
+        background-position: right;
+        background-size: cover;
         .hero__header{
             z-index:11;
             @extend %CSScenter-item;
@@ -275,8 +282,6 @@ body{
         }
     }
 }
-
-
 //BANNERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 @media(max-width:1100px){
     .header{
@@ -327,8 +332,8 @@ body{
     .header__intro .icon__close{
     display: block;
     position: ABSOLUTE;
-    left: 10px;
-    top: 5px;
+    left: 15px;
+    top: 11px;
     font-size: 18px;
     line-height: 18px;
     font-weight: 600;
@@ -361,12 +366,12 @@ body{
     max-width:1400px;
     margin:auto;
     background: #fff;
-    &__section1{
-        @extend %CSSsection1;
-        .section1__title{
+    &__services{
+        @extend %CSSservices;
+        .services__title{
             @extend %CSStitle;
         }
-        .section1__card{
+        .services__card{
             @extend %CSSsection-card;
             .card__item{
                 text-align: center;
@@ -379,13 +384,13 @@ body{
             }
         }
     }
-    &__section2{
+    &__Information{
         margin-top:100px;
         width:100%;
         display:flex;
         flex-direction: row;
       
-        .section2__img{
+        .Information__img{
             width:31%;
             background: #e9e9e9;
             text-align: right;
@@ -394,7 +399,7 @@ body{
             }
         }
 
-        .section2__textbox{
+        .Information__textbox{
             width:69%;
             background-image:url(../image/background.jpg);
             background-size: cover;
@@ -460,20 +465,20 @@ body{
                 }
 
             }
-            .section2__background{
+            .Information__background{
                 @extend  %CSSbackground;
             }
         }
        
     }
-    &__section3{
+    &__values{
         background: #f9f9f9;
-        .section3__content{
-            @extend %CSSsection1;
-            .section3__title{
+        .values__content{
+            @extend %CSSservices;
+            .values__title{
                 @extend %CSStitle;
             }
-            .section3__card{
+            .values__card{
                 @extend %CSSsection-card;
                 .card__item{
                     text-align: center;
@@ -487,19 +492,19 @@ body{
             }
         }
     }
-    &__section4{
+    &__project{
         width:100%;
         background: #fff;
-        .section4__title{
+        .project__title{
             @extend %CSStitle;
         }
-       .section4__content{
+       .project__content{
         width:100%;
         display:flex;
         flex-direction: row;
         margin-bottom: 100px;
         overflow: hidden;
-        .section4__textbox{
+        .project__textbox{
             width:50%;
             .textbox-inner{
                 padding-left:230px;
@@ -562,7 +567,7 @@ body{
                 }
             }
         }
-        .section4__image{
+        .project__image{
             width:50%;
             img {
               margin-left:50px;  
@@ -570,12 +575,12 @@ body{
         }
        }
     }
-    &__section5{
+    &__clients{
         background: #fff;
-        .section5__title{
+        .clients__title{
             @extend %CSStitle; 
         }
-        .section5__textbox1{
+        .clients__textbox1{
             max-width:940px;
             margin:auto;
             display:flex;
@@ -619,18 +624,18 @@ body{
                 margin-left:42px;
             }
         }
-        .section5--textbox2{
+        .clients--textbox2{
             margin-top:40px;
             .textbox2--text{
                 padding: 24px 0 24px 40px;
             }
         }
     }
-    &__section6{
+    &__nextProject{
         width:100%;
         background: #7cc576;
         margin-top:74px;
-        .section6__contact{
+        .nextProject__contact{
             max-width:689px;
             margin:auto;
             text-align: center;
@@ -667,7 +672,7 @@ body{
                 border: 5px solid #3e3e3e;
             }
         }
-        .section6__logo{
+        .nextProject__logo{
             background: #fff;
             padding: 60px 0;
             width:100%;
@@ -761,23 +766,23 @@ body{
 ////////////////////////////////////////////////////////
 @media(max-width:1300px){
     .content{
-        &__section4{
-          .section4__content{
-            .section4__textbox{
+        &__project{
+          .project__content{
+            .project__textbox{
                 .textbox-inner{
                     padding-left:50px;
                 }
             }
-            .section4__image{
+            .project__image{
                 img{
                     width:100%;
                 }
             }
           }
         }
-        &__section3{
-            .section3__content{
-                .section3__card{
+        &__values{
+            .values__content{
+                .values__card{
                     .card__item{
                         .card__item--image img{
                             max-width:60px; max-height:60px;  object-fit: cover;
@@ -794,8 +799,8 @@ body{
 
 @media(max-width:1100px){
     .content{
-        &__section1{
-            .section1__title{
+        &__services{
+            .services__title{
                 h1{
                     font-size:30px;
                 }
@@ -804,8 +809,8 @@ body{
                 }
             }
         }
-        &__section2{
-            .section2__textbox{
+        &__Information{
+            .Information__textbox{
                 .textbox__content{
                     h1{
                         font-size: 35px;
@@ -818,9 +823,9 @@ body{
                 }
             }
         }
-        &__section3{
-            .section3__content{
-                .section3__title{
+        &__values{
+            .values__content{
+                .values__title{
                     h1{
                         font-size:30px;
                     }
@@ -830,8 +835,8 @@ body{
                 }
             }
         }
-        &__section4{
-            .section4__title{
+        &__project{
+            .project__title{
                 h1{
                     font-size:30px;
                 }
@@ -840,8 +845,8 @@ body{
                 }
             }
         }
-        &__section5{
-            .section5__title{
+        &__clients{
+            .clients__title{
                 h1{
                     font-size:30px;
                 }
@@ -855,18 +860,18 @@ body{
 
 @media(max-width:1000px){
     .content{
-        &__section2{
-            .section2__img{
+        &__Information{
+            .Information__img{
                 width:0;
             }
-            .section2__textbox{
+            .Information__textbox{
                 width:100%;
             }
         }
-        &__section4{
-            .section4__content{
+        &__project{
+            .project__content{
                 flex-direction: column-reverse;
-                .section4__textbox{
+                .project__textbox{
                     width: 90%;
                     margin: auto;
                     margin-top:50px;
@@ -874,7 +879,7 @@ body{
                         padding-left:0;
                     }
                 }
-                .section4__image{
+                .project__image{
                     width:100%;
                     img{
                         margin-left: 0px;
@@ -882,8 +887,8 @@ body{
                 }
             }
         }
-        &__section5{
-            .section5__textbox1{
+        &__clients{
+            .clients__textbox1{
                 .textbox1__1{
                     width:0;
                 }
@@ -901,8 +906,8 @@ body{
 
 @media(max-width:900px){
     .content{
-        &__section1{
-            .section1__title{
+        &__services{
+            .services__title{
                 h1{
                     font-size:30px;
                 }
@@ -910,7 +915,7 @@ body{
                     font-size:16px;
                 }
             }
-            .section1__card{
+            .services__card{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
@@ -924,9 +929,9 @@ body{
                 }
             }
         }
-        &__section3{
-            .section3__content{
-                .section3__card{
+        &__values{
+            .values__content{
+                .values__card{
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr 1fr;
@@ -941,8 +946,8 @@ body{
                 }
             }
         }
-        &__section6{
-            .section6__contact,.contact__title{
+        &__nextProject{
+            .nextProject__contact,.contact__title{
              p{font-size:25px;}
              button{
                 padding: 13px 29px;
@@ -968,8 +973,8 @@ body{
 }
 @media(max-width:700px){
     .content{
-        &__section2{
-            .section2__textbox{
+        &__Information{
+            .Information__textbox{
                 padding-left: 30px;
                 .textbox__content{
                     h1{
@@ -981,8 +986,8 @@ body{
                 }
             }
         }
-        &__section6{
-            .section6__logo{
+        &__nextProject{
+            .nextProject__logo{
                 .logo__image{
                    display:grid;
                    grid-template-columns: 1fr 1fr;
@@ -998,17 +1003,22 @@ body{
             }
         }
     } 
-    .content__section5 .section5__title {
+    .content__clients .clients__title {
         padding:50px 0;
+    }
+    header.header{
+     overflow: hidden;
     }
 }
 @media(max-width:600px){
     .content{
-        &__section1{
-            .section1__card{
+        &__services{
+            .services__card{
                 display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template : {
+                    columns: 1fr;
+                    rows: 1fr 1fr 1fr;
+                }
                 .card__item{
                     width: 90%;
                     margin: auto;
@@ -1016,12 +1026,14 @@ body{
                 }
             }
         }
-        &__section3{
-            .section3__content{
-                .section3__card{
+        &__values{
+            .values__content{
+                .values__card{
                     display: grid;
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-template : {
+                        columns: 1fr;
+                        rows: 1fr 1fr 1fr;
+                    }
                     .card__item{
                         width: 90%;
                         margin: auto;
@@ -1030,9 +1042,9 @@ body{
                 }
             }
         }
-        &__section4{
-            .section4__content{
-                .section4__textbox{
+        &__project{
+            .project__content{
+                .project__textbox{
                     .textbox-inner{
                         p,.p--2{
                             font-size:14px;
@@ -1060,8 +1072,10 @@ body{
     .foodter{
         .foodter__content{
             display:grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template : {
+                columns: 1fr;
+                rows: 1fr 1fr 1fr;
+            }
             flex-direction: unset;
             margin-left: 30px;
             .content__item{
@@ -1072,8 +1086,10 @@ body{
         .foodter__last{
             .content__last{
                 display:grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1fr;
+                grid-template : {
+                    columns: 1fr;
+                    rows: 1fr 1fr 1fr;
+                }
                 .last--text{
                     display: block;
                     align-items: unset;
@@ -1109,6 +1125,7 @@ body{
 }
 .header__intro.open{
     transform: translateX(0);
+    display:block;
 }
 
 .opacity{
